@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.*;
 /**
  * Created by H on 2018. 11. 26.
  */
-public class FakeAuctionServer {
+public class FakeAuctionServer implements AuctionServer {
     public static final String ITEM_ID_AS_LOGIN = "auction-%s";
     public static final String AUCTION_RESOURCE = "Auction";
     public static final String AUCTION_PASSWORD = "auction";

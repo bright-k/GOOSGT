@@ -7,7 +7,7 @@ import org.junit.Test;
  * Created by H on 2018. 11. 26.
  */
 public class AuctionSinperEndToEndTest {
-    private final FakeAuctionServer auction = new FakeAuctionServer("item-54321");
+    private final AuctionServer auction = new FakeAuctionServer("item-54321");
     private final ApplicationRunner application = new ApplicationRunner();
 
     @Test

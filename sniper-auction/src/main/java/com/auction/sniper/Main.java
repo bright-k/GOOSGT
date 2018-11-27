@@ -46,6 +46,13 @@ public class Main {
         return String.format(AUCTION_ID_FORMAT, itemId, connection.getServiceName());
     }
 
+    private static JLabel createLabel(String initialText) {
+        JLabel result = new JLabel(initialText);
+        result.setName(SNIPER_STATUS_NAME);
+        result.setBorder(new LineBorder(Color.black));
+        return result;
+    }
+
     public Main() throws Exception {
         startUserInterface();
     }
@@ -59,7 +66,6 @@ public class Main {
         });
         chat.sendMessage(new Message());
     }
-
 
     private void startUserInterface() throws Exception {
         SwingUtilities.invokeAndWait(() -> ui = new MainWindow());
@@ -78,13 +84,5 @@ public class Main {
         public void showStatus(String status) {
             sniperStatus.setText(status);
         }
-    }
-
-
-    private static JLabel createLabel(String initialText) {
-        JLabel result = new JLabel(initialText);
-        result.setName(SNIPER_STATUS_NAME);
-        result.setBorder(new LineBorder(Color.black));
-        return result;
     }
 }
